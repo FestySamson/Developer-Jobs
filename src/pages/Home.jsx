@@ -10,7 +10,7 @@ const Home = () => {
     <>
     <Hero title="Become Front End Developer" subtitle="Find the Front End job that fits your skills and needs"/>
     <HomeCards/>
-    <JobLisitings/>
+    <JobLisitings isHome = {true}/>
     <AllJobs/>
     </>
   )
