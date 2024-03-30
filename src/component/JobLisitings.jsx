@@ -7,11 +7,12 @@ const JobLisitings = ({isHome = false}) => {
     const [myJobs, setMyJobs] = useState([]) // gets the jobs  and stores it in the state
     const [loading, setLoading] = useState (true)
 
+
     useEffect (()=>{
       const fetchJobs = async ()=>{
-
+        const apiUrl = isHome ?'api/job?_limit=3': 'api/job'
         try {
-          const res = await fetch ('http://localhost:8000/job')
+          const res = await fetch (apiUrl)
           const data = await res.json()
           setMyJobs(data)
 
